@@ -15,10 +15,7 @@ switch ($method) {
     if($id == null) {
       $response = $post->getPosts();
     } else {
-      $response =  array(
-        "post" => $post->getPost($id),
-        "comments" => $post->getComments($id)
-      );
+      $response = $post->getPost($id);
     }
     break;
 
@@ -35,6 +32,10 @@ switch ($method) {
 }
 
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: *");
+header('Access-Control-Allow-Methods:*');
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
 echo $response;
 

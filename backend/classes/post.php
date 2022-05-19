@@ -27,7 +27,7 @@ class Post {
   }
 
   public function createPost($user_id, $title, $body) {
-    $query = "INSERT INTO posts(user_id, title, body) VALUES ('$user_id', '$title', '$body')";
+    $query = "INSERT INTO post(user_id, title, body) VALUES ('$user_id', '$title', '$body')";
     $result = $this->database->query($query);
     return json_decode($result);
   }

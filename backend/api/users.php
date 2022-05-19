@@ -7,7 +7,10 @@ $response = null;
 
 $method = ($_SERVER['REQUEST_METHOD']);
 
-
+$auth = get_headers("access-token");
+if($auth) {
+  echo "ASDASDASD";
+}
 switch ($method) {
   case 'GET':
     $id = $_GET['id']; 
@@ -31,6 +34,10 @@ switch ($method) {
 }
 
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: *");
+header('Access-Control-Allow-Methods:*');
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
 echo $response;
 

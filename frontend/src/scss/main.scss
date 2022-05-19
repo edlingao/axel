@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import "toastr";
+// @import 'material-design-icons-iconfont/src/material-design-icons';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
+}
+
+$main-color: #14213D;
+$orange: #FCA311;
+$dark: #000000;
+$purple: #6C4C94;
+
+
+body {
+  background: $main-color;
+  background-image: url('../svg/background-balls.svg');
+}
+
+#root{
+  width: 100%;
+  height: 100vh;
+}
+
+.hide-item {
+  display: none;
+}
+#toast-container > div {
+  -moz-box-shadow: unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
